@@ -1,0 +1,13 @@
+pre-commit:
+  commands:
+    check:
+      run: pnpm biome check {staged_files}
+    format:
+      run: pnpm biome format --write {staged_files}
+
+pre-push:
+  commands:
+    check:
+      run: pnpm biome check
+    typecheck:
+      run: pnpm typecheck
